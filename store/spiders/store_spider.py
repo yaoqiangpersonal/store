@@ -8,9 +8,9 @@ class StoreSpiderSpider(scrapy.Spider):
 
     def start_requests(self):
         
-        for page in range(1,3):
+        for page in range(1,14):
             yield scrapy.Request(
-                "https://store.hmv.com/store/promotions/2for_244kultrahd?sort=most_relevant%20desc&quantity=24&view=grid&categories=offers&offers=2%2Bfor%2B%C2%A324%2B4K%2BUltra%2BHD&page=" + str(page),
+                "https://store.hmv.com/store/film-tv/4k-ultra-hd-blu-ray-2-for-%c2%a330?sc_src=email_10684133&sc_lid=572380522&sc_uid=JJvo3RLLwB&sc_llid=36424&sc_eh=0dbf10fb4ec5d1ca1&utm_source=emarsys&utm_medium=Email&utm_campaign=Visual%3A+2+for+%C2%A330+4K+Ultra+HD%3A+Visual+07%2F04-2022-04-07+20%3A30%3A00-Newsletter&page=" + str(page),
                                 meta={"proxy": self.proxy},
                                 callback=self.parse
                                 )
